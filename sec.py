@@ -63,7 +63,9 @@ table = soup.find_all("table")
 # This is the output of a single docket comment value
 data = [docket_id, docket_title];
 
-
-
-# # print(sys.argv[1])
 print(data);
+
+
+
+
+
