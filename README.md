@@ -29,7 +29,7 @@ File sec.py is a basic file where you can type in the sec rule comment page and 
 ## How to use:
 Run the command `sec.py [url]`
 
-
+sec.py https://www.sec.gov/comments/s7-11-23/s71123.htm
 ## Sample Output
 ```[
   [
