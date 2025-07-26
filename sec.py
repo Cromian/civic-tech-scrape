@@ -58,13 +58,12 @@ docket_title = "title:", soup.find("h1").text.strip()
 # The links are found in the <table> tag;
 table = soup.find_all("table")
 
-# We then want to loop through the td values and extract the links which are the individual comments. 
+# We then want to loop through the td values and extract the links which are the individual comments. [This seems to not work ... yet]
 
 # This is the output of a single docket comment value
 data = [docket_id, docket_title];
 
 
 
-# print(sys.argv[1])
+# # print(sys.argv[1])
 print(data);
-
