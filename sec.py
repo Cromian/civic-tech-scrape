@@ -1,6 +1,8 @@
 import requests
 import re
 import sys
+import json
+
 from bs4 import BeautifulSoup
 
 # Author: Misha Vinokur.
@@ -56,16 +58,12 @@ docket_id = "id:", match.group(1)
 docket_title = "title:", soup.find("h1").text.strip()
 
 # The links are found in the <table> tag;
-table = soup.find_all("table")
-
-# We then want to loop through the td values and extract the links which are the individual comments. [This seems to not work ... yet]
+table = soup.find("table")
+links = table.find_all("a");
+file_links = "links:", [a['href'] for a in links if a.has_attr('href')]
 
 # This is the output of a single docket comment value
-data = [docket_id, docket_title];
+data = [docket_id, docket_title, file_links];
 
-print(data);
-
-
-
-
-
+# Output as JSON
+print(json.dumps(data));
