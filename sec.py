@@ -1,8 +1,9 @@
 import requests
 import re
+import sys
 from bs4 import BeautifulSoup
 
-# By: Misha Vinokur.
+# Author: Misha Vinokur.
 
 # Goal:
 # Scrape the SEC website and atempt to get data into a format that mirrulations can use. 
@@ -12,12 +13,17 @@ from bs4 import BeautifulSoup
 # Single Rule: https://www.sec.gov/rules-regulations/2025/06/s7-11-23#34-103320final
 # comments for single rule: https://www.sec.gov/comments/s7-11-23/s71123.htm
 
+# How to use:
+# Run the command sec.py [url]
+
 # Notes for future developer
 # The SEC website blocks many common scrapers, the way we went about this was to use sequence of
 # CURL commands to access the website. 
 
 # Test here is can we scrape a single rule comment page. 
-url = "https://www.sec.gov/rules-regulations/2025/06/s7-11-23#34-103320final"
+# url = "https://www.sec.gov/rules-regulations/2025/06/s7-11-23#34-103320final"
+
+url = sys.argv[1]
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
@@ -40,9 +46,6 @@ except requests.RequestException as e:
 
 soup = BeautifulSoup(html, "html.parser")
 
-# Goal
-# To go through this page and get some basic raw data that could be used to create a docket data array.
-
 # Get Docket ID. 
 # We get this via RegEx from the url path e.g. https://www.sec.gov/rules-regulations/2025/06/s7-11-23#34-103320final
 match = re.search(r"/(s7-\d+-\d+)", url, re.IGNORECASE)
@@ -60,9 +63,8 @@ table = soup.find_all("table")
 # This is the output of a single docket comment value
 data = [docket_id, docket_title];
 
+
+
+# print(sys.argv[1])
 print(data);
-
-
-
-
 
