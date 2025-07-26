@@ -12,7 +12,7 @@ If you're using `sec.py`, you can begin by scraping initial data and saving it t
 ### Status of FCCScraping.py ###
 What My Code Does:
 * Given a range of proceeding creation dates, pull all proceedings within that range to process
-  * Obtain the Docket # and # of Filings under each proceeding
+* Obtain the Docket # and # of Filings under each proceeding
 * Iterate through each of the Filings within each proceeding and obtain:
   * Every document link attached to a Filing
   * The comment text associated with the Filing
