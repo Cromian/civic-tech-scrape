@@ -9,3 +9,10 @@ We each tried different approaches to scraping the SEC and FEC websites
 # The use of these files for mirrulations.
 If you're using `sec.py`, you can begin by scraping initial data and saving it to the Mirrulations dataset as raw data. When you run the url command at scale, you can create a docket record. Then, by running a looped scrape on the file_links array, you can collect all the raw comments, including HTML, PDF, and other formats, for a specific SEC rule. In short, this script is a foundational tool for helping Mirrulations gather and organize data related to SEC comments.
 
+### Status of FCCScraping.py ###
+What My Code Does:
+* Given a range of proceeding creation dates, pull all proceedings within that range to process
+  * Obtain the Docket # and # of Filings under each proceeding
+* Iterate through each of the Filings within each proceeding and obtain:
+  * Every document link attached to a Filing
+  * The comment text associated with the Filing
