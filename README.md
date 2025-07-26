@@ -15,7 +15,7 @@ What My Code Does:
   * The comment text associated with the Filing
 
 # Sec.py
-Scrape SEC rule comments
+Scrape SEC rule comments - https://github.com/Cromian/sec-comments
 ## The use of these files for mirrulations.
 
 If you're using sec.py, you can begin by scraping initial data and saving it to the Mirrulations dataset as raw data. When you run the url command at scale, you can create a docket record. Then, by running a looped scrape on the file_links array, you can collect all the raw comments, including HTML, PDF, and other formats, for a specific SEC rule. In short, this script is a foundational tool for helping Mirrulations gather and organize data related to SEC comments.
