@@ -7,7 +7,6 @@ We each tried different approaches to scraping the SEC and FEC websites
 
 
 # FCCScraping.py
-What My Code Does:
 * Given a range of proceeding creation dates, pull all proceedings within that range to process
 * Obtain the Docket # and # of Filings under each proceeding
 * Iterate through each of the Filings within each proceeding and obtain:
