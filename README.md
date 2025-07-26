@@ -1,1 +1,1 @@
-This is the web scrapping team's work for the Civic Tech DC hackathon.
+This is the web scraping team's work for the Civic Tech DC hackathon.
